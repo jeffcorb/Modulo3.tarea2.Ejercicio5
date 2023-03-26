@@ -1,5 +1,19 @@
 public class Main {
     public static void main(String[] args) {
+        imprimirOperaciones();
+    }
+
+    private static int[] generarArray() {
+        final var aleatorio = new Aleatorio();
+        final var numeroArray = aleatorio.generarRandomInteger(10, 5);
+        var array = new int[numeroArray];
+        for (var i = 0; i < array.length; i++) {
+            array[i] = aleatorio.generarRandomInteger(10, 2);
+        }
+        return array;
+    }
+
+    private static void imprimirOperaciones() {
         final var array = generarArray();
         final var operaciones = new Operaciones();
         final var suma = operaciones.suma(array);
@@ -11,15 +25,5 @@ public class Main {
         System.out.println(suma);
         System.out.println("La multiplicacion es:");
         System.out.println(multiplicacion);
-    }
-
-    public static int[] generarArray() {
-        final var aleatorio = new Aleatorio();
-        final var numeroArray = aleatorio.generarRandomInteger(10, 5);
-        var array = new int[numeroArray];
-        for (var i = 0; i < array.length; i++) {
-            array[i] = aleatorio.generarRandomInteger(10, 2);
-        }
-        return array;
     }
 }
