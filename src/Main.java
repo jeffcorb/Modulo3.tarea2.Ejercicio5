@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        imprimirOperaciones();
+        final var array = generarArray();
+        imprimirOperaciones(array);
     }
 
     private static int[] generarArray() {
@@ -13,8 +14,7 @@ public class Main {
         return array;
     }
 
-    private static void imprimirOperaciones() {
-        final var array = generarArray();
+    private static void imprimirOperaciones(int[] array) {
         final var operaciones = new Operaciones();
         final var suma = operaciones.suma(array);
         final var multiplicacion = operaciones.multiplicacion(array);
