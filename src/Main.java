@@ -7,7 +7,7 @@ public class Main {
     private static int[] generarArray() {
         final var aleatorio = new Aleatorio();
         final var numeroArray = aleatorio.generarRandomInteger(10, 5);
-        var array = new int[numeroArray];
+        final var array = new int[numeroArray];
         for (var i = 0; i < array.length; i++) {
             array[i] = aleatorio.generarRandomInteger(10, 2);
         }

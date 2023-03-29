@@ -17,7 +17,7 @@ public class Operaciones {
 
     void imprimir(int[] array) {
         for (var i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+            System.out.printf("%d ", array[i]);
         }
     }
 }
